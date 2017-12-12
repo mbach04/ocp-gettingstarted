@@ -53,7 +53,12 @@
             <img src="ocp_logo.svg"></img>
           </div>
         </div>
-        {{ currentPod }}
+        {% for k, v in vars %}
+        {% if k == 'HOSTNAME' %}
+        {{ v }}
+        {% endif %}
+        {% end for %}
+
       </div><!-- /.container -->
     </div>
 
