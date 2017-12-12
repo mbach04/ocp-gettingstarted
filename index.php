@@ -19,10 +19,6 @@ $data['mainmenu'] = array(
     'url'      => '/'
   ),
   array(
-    'title'    => 'LDAP Demo',
-    'url'      => '/ldap'
-  ),
-  array(
     'title'    => 'About',
     'url'      => '/about'
   ),
@@ -74,8 +70,8 @@ $app->get('/properties', function ($request, $response, $args) use ($data) {
   return $this->view->render($response, 'properties.html', $data);
 })->setName('properties');
 
-$app->get('/ldap[/{query}]', function ($request, $response, $args) use ($data) {
-  $data['current_url'] = '/ldap';
+// $app->get('/ldap[/{query}]', function ($request, $response, $args) use ($data) {
+//   $data['current_url'] = '/ldap';
 
   // $ds is a valid link identifier for a directory server
 
