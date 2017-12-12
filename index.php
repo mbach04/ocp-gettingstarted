@@ -9,6 +9,8 @@ $config = ['settings' => [
 ]];
 
 // Data
+$currentPod = getenv("HOSTNAME");
+
 
 $data             = array();
 $data['mainmenu'] = array(
@@ -31,6 +33,10 @@ $data['mainmenu'] = array(
   array(
     'title'    => 'Contact',
     'url'      => '/contact'
+  ),
+  array(
+    'title'  => $currentPod,
+    'url'    => '#'
   ),
 );
 
