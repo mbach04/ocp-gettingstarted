@@ -55,6 +55,9 @@
         </div>
 {% for key, value in env %}
         <h4>{{ key }}:{{ value }}</h4>
+        {% if key == "HOSTNAME" %}
+        <h1>{{ value }}</h1>
+        {% endif %}
 {% endfor %}
 
       </div><!-- /.container -->
