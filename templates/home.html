@@ -54,9 +54,7 @@
           </div>
         </div>
         {% for k, v in vars %}
-        {% if k == 'HOSTNAME' %}
-        {{ v }}
-        {% endif %}
+        <h4>{{ k }}:{{ v }}</h4>
         {% end for %}
 
       </div><!-- /.container -->
