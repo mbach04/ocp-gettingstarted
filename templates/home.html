@@ -48,13 +48,14 @@
 
         <div class="starter-template">
           <h1>Welcome to OpenShift Container Platform</h1>
-          <h1>You received this page from pod: {{ HOSTNAME }}</h1>
           <p class="lead">Use this as a quick-start for your application development.<br>In order to </p>
           <div>
             <img src="ocp_logo.svg"></img>
           </div>
         </div>
-
+        {% for key, value in vars %}
+          <h3>{{ key }}: {{ value }}</h3></br>
+        {% endfor %}
       </div><!-- /.container -->
     </div>
 
