@@ -53,9 +53,10 @@
             <img src="ocp_logo.svg"></img>
           </div>
         </div>
-{% for key, value in vars %}
+{% for key, value in env %}
       {% if key == 'HOSTNAME' %} {{ value }} {% endif %}
 {% endfor %}
+{{ podName }}
 
       </div><!-- /.container -->
     </div>
