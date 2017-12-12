@@ -17,6 +17,17 @@
 
     <!-- Custom styles for this template -->
     <link href="/assets/starter-template.css" rel="stylesheet">
+    
+    <!-- Force page reload with no cache -->
+    <?php>
+      header('Pragma: public');
+      header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");                  // Date in the past   
+      header('Last-Modified: '.gmdate('D, d M Y H:i:s') . ' GMT');
+      header('Cache-Control: no-store, no-cache, must-revalidate');     // HTTP/1.1
+      header('Cache-Control: pre-check=0, post-check=0, max-age=0', false);    // HTTP/1.1
+      header ("Pragma: no-cache");
+      header("Expires: 0", false);
+    <?>
 
   </head>
 
@@ -50,10 +61,9 @@
           <h1>Welcome to OpenShift Container Platform</h1>
           {% for key, value in env %}
             {% if key == "HOSTNAME" %}
-              <h3>{{ value }}</h3>
+              <h2>{{ value }}</h2>
             {% endif %}
           {% endfor %}
-          <p class="lead">Use this as a quick-start for your application development.<br>In order to </p>
           <div>
             <img src="ocp_logo.svg"></img>
           </div>
