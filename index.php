@@ -50,8 +50,8 @@ $app->add(function ($request, $response, $next) use ($data) {
 
 $app->get('/', function ($request, $response, $args) use ($data) {
   $data['current_url'] = '/';
-  $data['env'] = $_SERVER;
-  $data['podName'] = $currentPod;
+  $data['vars'] = $_SERVER;
+  $data['env'] = $_ENV;
   return $this->view->render($response, 'home.html', $data);
 })->setName('homepage');
 
