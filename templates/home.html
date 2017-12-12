@@ -48,16 +48,17 @@
 
         <div class="starter-template">
           <h1>Welcome to OpenShift Container Platform</h1>
+          {% for key, value in env %}
+            {% if key == "HOSTNAME" %}
+              <h3>{{ value }}</h3>
+            {% endif %}
+          {% endfor %}
           <p class="lead">Use this as a quick-start for your application development.<br>In order to </p>
           <div>
             <img src="ocp_logo.svg"></img>
           </div>
         </div>
-{% for key, value in env %}
-        {% if key == "HOSTNAME" %}
-        <h3>{{ value }}</h3>
-        {% endif %}
-{% endfor %}
+
 
       </div><!-- /.container -->
     </div>
