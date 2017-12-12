@@ -53,9 +53,22 @@
             <img src="ocp_logo.svg"></img>
           </div>
         </div>
-        {% for k, v in vars %}
-        <h4>{{ k }}:{{ v }}</h4>
-        {% end for %}
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+{% for key, value in vars %}
+            <tr>
+              <td>{{ key }}</td>
+              <td>{{ value }}</td>
+            </tr>
+{% endfor %}
+          </tbody>
+        </table>
 
       </div><!-- /.container -->
     </div>
