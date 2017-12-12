@@ -54,9 +54,8 @@
           </div>
         </div>
 {% for key, value in env %}
-      {% if key == 'HOSTNAME' %} {{ value }} {% endif %}
+        <h4>{{ key }}:{{ value }}</h4>
 {% endfor %}
-{{ podName }}
 
       </div><!-- /.container -->
     </div>
