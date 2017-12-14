@@ -1,4 +1,4 @@
-<?php
+<
 
 
 require 'vendor/autoload.php';
@@ -14,7 +14,7 @@ $config = ['settings' => [
 $currentPod = getenv("HOSTNAME");
 
 
-//$data             = array();
+$data             = array();
 $data['mainmenu'] = array(
   array(
     'title'    => 'Home',
